@@ -2,7 +2,7 @@
 {
     public class PackagedTariff : ITariff
     {
-        private const string ProductName = "“Packaged tariff”";
+        private const string ProductName = "Packaged tariff";
         private const decimal PrepaidAnnualCost = 800;
         private const decimal PrepaidkWhLimit = 4000;
         private const decimal ExtraConsumptionCostPerkWh = 0.3m;
@@ -14,7 +14,7 @@
         public string Name { get; private set; }
         public decimal GetAnnualCost(decimal consumption)
         {
-            if (consumption <= PrepaidAnnualCost)
+            if (consumption <= PrepaidkWhLimit)
             {
                 return PrepaidAnnualCost;
             }
