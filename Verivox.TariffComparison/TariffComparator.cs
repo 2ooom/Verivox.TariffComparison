@@ -5,20 +5,16 @@ namespace Verivox.TariffComparison
 {
     public class TariffComparator : ITariffComparator
     {
-        private readonly IEnumerable<ITariff> _tariffs;
+        public IEnumerable<ITariff> Tariffs;
 
-        public TariffComparator()
+        public TariffComparator(IEnumerable<ITariff> tariffs)
         {
-            _tariffs = new List<ITariff>
-            {
-                new BasicTariff(),
-                new PackagedTariff()
-            };
+            Tariffs = tariffs;
         }
 
         public IEnumerable<TariffComparisonInfo> Compare(decimal consumption)
         {
-            return _tariffs.Select(tariff => new TariffComparisonInfo
+            return Tariffs.Select(tariff => new TariffComparisonInfo
             {
                 AnnnualCost = tariff.GetAnnualCost(consumption),
                 TariffName = tariff.Name

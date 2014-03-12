@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITariffComparator.cs" />
+    <Compile Include="TariffComparisonInfo.cs" />
     <Compile Include="ITariff.cs" />
     <Compile Include="PackagedTariff.cs" />
     <Compile Include="BasicTariff.cs" />
