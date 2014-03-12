@@ -43,6 +43,7 @@
     <Compile Include="PackagedTariff.cs" />
     <Compile Include="BasicTariff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TariffComparator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
